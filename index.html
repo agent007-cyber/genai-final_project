@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume & Cover Letter Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Resume & Cover Letter Generator</h2>
+    <form id="resumeForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" autofocus>
+      <div id="name-error" class="error"></div>
+
+      <label for="education">Education</label>
+      <input type="text" id="education" name="education">
+      <div id="education-error" class="error"></div>
+
+      <label for="experience">Work Experience</label>
+      <textarea id="experience" name="experience" rows="4"></textarea>
+      <div id="experience-error" class="error"></div>
+
+      <label for="role">Target Job Role</label>
+      <input type="text" id="role" name="role">
+      <div id="role-error" class="error"></div>
+
+
+      <button type="submit">Generate</button>
+    </form>
+    <div id="output"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:gray;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 600px;
+  margin: 40px auto;
+  background: rgb(139, 188, 245);
+  border-radius: 12px;
+  box-shadow: 10px 10px 40px white;
+  padding: 32px 24px;
+}
+
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: blue;
+}
+
+form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 350;
+  color: yellow;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid grey;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+form input:focus, form textarea:focus {
+  border-color: red;
+  outline: none
+}
+
+form textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right,blue,purple);
+  color:white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(#4338ca, #4f46e5);
+  transform: scale(1.02);
+}
+
+#output {
+  display: none;        
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 6px;
+  background: white;
+  border-left: 4px solid #10b981;
+  color: blue;
+  font-weight: 500;
+}
