@@ -84,7 +84,7 @@ document.getElementById('resumeForm').addEventListener('submit', async function(
       outputDiv.innerHTML = "<span style='color:red;'>Unexpected response from server.</span>";
     }
   } catch (err) {
-    outputDiv.innerHTML = "<span style='color:red;'>Failed to connect to server.</span>";
+    outputDiv.innerHTML = "<span style='color:red;'>Generate API key from google AI studio to use it.</span>";
   }
 });
 
