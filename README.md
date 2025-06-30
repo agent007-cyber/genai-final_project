@@ -8,5 +8,12 @@ upon cloning the repo first run the command called npm install to install all th
 
 ##step-2
 
-go to google ai studio and generate an api key and then create a file called .env and just copy the below command
+go to google ai studio and generate an api key and then create a file called .env and just copy the below command into the .env file with the api key you created.
 GEMINI_API_KEY = your api key which you generated
+
+##step-3
+
+in the terminal run the command below command to start the server
+node server.js
+
+
