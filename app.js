@@ -14,6 +14,7 @@ document.getElementById('resumeForm').addEventListener('submit', async function(
   const roleError = document.getElementById('role-error');
   const outputDiv = document.getElementById('output');
 
+  
   nameError.textContent = '';
   educationError.textContent = '';
   experienceError.textContent = '';
@@ -21,6 +22,7 @@ document.getElementById('resumeForm').addEventListener('submit', async function(
   outputDiv.style.display = 'none';
   outputDiv.innerHTML = '';
 
+  
   let emptyFields = 0;
   if (!name) {
     emptyFields++;
@@ -39,18 +41,20 @@ document.getElementById('resumeForm').addEventListener('submit', async function(
     roleError.textContent = "Please enter your target job role.";
   }
 
+  
   if (emptyFields === 4) {
     outputDiv.innerHTML = "<span style='color:red;'>Please fill in all fields.</span>";
     outputDiv.style.display = 'block';
     return;
   }
 
+  
   if (emptyFields > 0) {
     return;
   }
 
-  // Show loading spinner while generating resume and cover letter
-  outputDiv.innerHTML = '<div id="loadingSpinner"></div>Generating resume and cover letter...';
+  // All fields filled, call backend API
+  outputDiv.innerHTML = "Generating resume and cover letter...";
   outputDiv.style.display = 'block';
 
   try {
@@ -65,7 +69,7 @@ document.getElementById('resumeForm').addEventListener('submit', async function(
     const data = await response.json();
 
     if (data.result) {
-      // Format newlines to <br> for HTML display
+      // Formatting data
       const formatted = data.result.replace(/\n/g, '<br>');
       outputDiv.innerHTML = `<h3>AI-Generated Resume & Cover Letter</h3>
       <div style="white-space:pre-wrap;">${formatted}</div>
@@ -73,26 +77,19 @@ document.getElementById('resumeForm').addEventListener('submit', async function(
       document.getElementById('downloadPDF').onclick = function() {
         downloadPDF({ name, education, experience, role });
       };
+
     } else if (data.error) {
       outputDiv.innerHTML = `<span style="color:red;">${data.error}</span>`;
     } else {
       outputDiv.innerHTML = "<span style='color:red;'>Unexpected response from server.</span>";
     }
   } catch (err) {
-<<<<<<< HEAD
-    outputDiv.innerHTML = "<span style='color:red;'>Generate API key from Google AI Studio to use it.</span>";
-=======
-    outputDiv.innerHTML = "<span style='color:red;'>Generate your API key first.</span>";
->>>>>>> eaf849570c7919aaeb8ed4073d50440829a282d9
+    outputDiv.innerHTML = "<span style='color:red;'>Generate API key from google AI studio to use it.</span>";
   }
 });
 
-// PDF download function with loading indicator
+// PDF download function
 async function downloadPDF(data) {
-  const outputDiv = document.getElementById('output');
-  // Append spinner and downloading text
-  outputDiv.innerHTML += '<div id="pdfLoadingSpinner"></div><div id="pdfLoadingText">Downloading PDF...</div>';
-
   try {
     const response = await fetch('http://localhost:3000/generate', {
       method: 'POST',
@@ -109,15 +106,7 @@ async function downloadPDF(data) {
     a.click();
     a.remove();
     window.URL.revokeObjectURL(url);
-
-    // Remove spinner and text, show success message
-    document.getElementById('pdfLoadingSpinner').remove();
-    document.getElementById('pdfLoadingText').remove();
-    outputDiv.innerHTML += "<span style='color:green;'>PDF downloaded successfully.</span>";
   } catch (err) {
-    // Remove spinner and text, show error message
-    if (document.getElementById('pdfLoadingSpinner')) document.getElementById('pdfLoadingSpinner').remove();
-    if (document.getElementById('pdfLoadingText')) document.getElementById('pdfLoadingText').remove();
-    outputDiv.innerHTML += "<span style='color:red;'>Failed to download PDF.</span>";
+    alert("Failed to download PDF.");
   }
 }

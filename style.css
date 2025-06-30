@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: gray;
+  background:gray;
   margin: 0;
   padding: 0;
 }
@@ -13,6 +13,8 @@ body {
   box-shadow: 10px 10px 40px white;
   padding: 32px 24px;
 }
+
+
 
 h2 {
   text-align: center;
@@ -33,8 +35,8 @@ form label {
   margin-bottom: 8px;
 }
 
-form input,
-form textarea {
+
+form input, form textarea {
   width: 100%;
   padding: 10px;
   border: 2px solid grey;
@@ -44,37 +46,35 @@ form textarea {
   font-family: 'Times New Roman', Times, serif;
 }
 
-form input:focus,
-form textarea:focus {
+form input:focus, form textarea:focus {
   border-color: red;
-  outline: none;
+  outline: none
 }
 
 form textarea {
   resize: vertical;
 }
 
-button[type='submit'] {
+button[type="submit"] {
   margin-top: 18px;
   width: 100%;
   padding: 12px;
-  background: linear-gradient(to right, blue, purple);
-  color: white;
+  background: linear-gradient(to right,blue,purple);
+  color:white;
   border: none;
   border-radius: 6px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-button[type='submit']:hover {
+button[type="submit"]:hover {
   background: linear-gradient(#4338ca, #4f46e5);
   transform: scale(1.02);
 }
 
 #output {
-  display: none;
+  display: none;        
   margin-top: 24px;
   padding: 16px;
   border-radius: 6px;
@@ -82,36 +82,4 @@ button[type='submit']:hover {
   border-left: 4px solid #10b981;
   color: blue;
   font-weight: 500;
-  word-wrap: break-word;
-}
-
-/* Loading Spinner Styles */
-#loadingSpinner,
-#pdfLoadingSpinner {
-  border: 6px solid #f3f3f3;
-  border-top: 6px solid #3498db;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-  margin: 20px auto;
-  display: block;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* PDF Downloading Text */
-#pdfLoadingText {
-  text-align: center;
-  color: #3498db;
-  font-weight: 600;
-  margin-top: 8px;
-  font-size: 1rem;
 }
