@@ -13,7 +13,7 @@ npm install
 
 ## step-3
 
-next go to google ai studio and generate an api key and then paste the below command in the .env file which is required for the working of this project<br>
+next go to google ai studio and generate an api key and then paste the below command in the .env file and replace "your api key which you generated" with the key you generated which is required for the working of this project<br>
 GEMINI_API_KEY = your api key which you generated
 
 ## step-4
