@@ -2,17 +2,17 @@
 
 This is my final project for the genai course which generates a resume and cover letter upon entering name, education,experience and target job role
 
-##Step-1
+## Step-1
 
 upon cloning the repo first run the command below command to install all the packages I have used in my program <br>
 npm install
 
-##step-2
+## step-2
 
 go to google ai studio and generate an api key and then paste the below command in the .env file which is required for the working of this project<br>
 GEMINI_API_KEY = your api key which you generated
 
-##step-3
+## step-3
 
 in the terminal run the below command to start the server <br>
 node server.js
