@@ -4,16 +4,17 @@ This is my final project for the genai course which generates a resume and cover
 
 ##Step-1
 
-upon cloning the repo first run the command called npm install to install all the packages i have used in my program
+upon cloning the repo first run the command below command to install all the packages I have used in my program <br>
+npm install
 
 ##step-2
 
-go to google ai studio and generate an api key and then create a file called .env and just copy the below command into the .env file with the api key you created<br>
+go to google ai studio and generate an api key and then paste the below command in the .env file which is required for the working of this project<br>
 GEMINI_API_KEY = your api key which you generated
 
 ##step-3
 
-in the terminal run the command below command to start the server <br>
+in the terminal run the below command to start the server <br>
 node server.js
 
 
