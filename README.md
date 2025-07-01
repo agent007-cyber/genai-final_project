@@ -21,4 +21,8 @@ GEMINI_API_KEY = your api key which you generated
 in the terminal run the below command to start the server <br>
 node server.js
 
+## step-5
+
+finally go to the html file and open it using any browser.
+
 
