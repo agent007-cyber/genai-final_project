@@ -4,7 +4,7 @@ This is my final project for the genai course which generates a resume and cover
 
 ## step-1
 
-clone tge repo using the command git clone 
+clone the repo using the command git clone https://github.com/agent007-cyber/genai-final_project.git
 
 ## Step-2
 
@@ -13,7 +13,7 @@ npm install
 
 ## step-3
 
-go to google ai studio and generate an api key and then paste the below command in the .env file which is required for the working of this project<br>
+next go to google ai studio and generate an api key and then paste the below command in the .env file which is required for the working of this project<br>
 GEMINI_API_KEY = your api key which you generated
 
 ## step-4
