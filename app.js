@@ -7,7 +7,7 @@ document.getElementById('resumeForm').addEventListener('submit', async function(
   const experience = document.getElementById('experience').value.trim();
   const role = document.getElementById('role').value.trim();
 
-  // Error containers
+  // Error message
   const nameError = document.getElementById('name-error');
   const educationError = document.getElementById('education-error');
   const experienceError = document.getElementById('experience-error');
